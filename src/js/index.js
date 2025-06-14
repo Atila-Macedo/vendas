@@ -44,11 +44,14 @@ botaoFiltrar.addEventListener("click", function () {
     }
 
     if (mostrarCarta) {
-      carta.classList.add("mostrar");
       carta.classList.remove("esconder");
     } else {
-      carta.classList.remove("mostrar");
       carta.classList.add("esconder");
     }
   });
+
+  // Atualizar visual das cartas após filtro (caso carrinho.js esteja presente)
+  if (typeof Carrinho !== 'undefined' && Carrinho.prototype.atualizarCartasFiltro) {
+    new Carrinho().atualizarCartasFiltro();
+  }
 });

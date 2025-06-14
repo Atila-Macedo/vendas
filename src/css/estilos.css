@@ -192,10 +192,6 @@ body {
 	display: none !important;
 }
 
-.mostrar {
-	display: flex !important;
-}
-
 .carrinho-container {
 	position: relative;
 }

@@ -118,6 +118,17 @@ class Carrinho {
         this.atualizarCarrinho();
         this.toggleCarrinho();
     }
+
+    atualizarCartasFiltro() {
+        const cartas = document.querySelectorAll('.carta');
+        cartas.forEach(carta => {
+            if (carta.classList.contains('esconder')) {
+                carta.style.display = 'none';
+            } else {
+                carta.style.display = '';
+            }
+        });
+    }
 }
 
 // Inicializar carrinho quando o DOM estiver carregado
